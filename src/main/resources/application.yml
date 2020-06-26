@@ -4,3 +4,14 @@ server:
 spring:
   application:
     name: email-center
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+endpoint:
+  web:
+    exposure:
+      include: prometheus
+      
