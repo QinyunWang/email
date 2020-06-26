@@ -14,4 +14,3 @@ endpoint:
   web:
     exposure:
       include: prometheus
-      

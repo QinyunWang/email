@@ -1,6 +1,7 @@
 package com.java.email.controller;
 
 import com.java.email.modal.Email;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -10,6 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/emails")
 public class EmailController {
+
+    @Qualifier(value = "userCounter")
 
     @GetMapping("/{id}")
     public ResponseEntity<Email> getEmailByUserId(@PathVariable("id") Integer id) {
